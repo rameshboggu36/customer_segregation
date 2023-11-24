@@ -16,7 +16,7 @@ Made use of a dataset containing the details of customers visiting a shopping ma
 
 You can find the dataset here:
 
-[_mall_customers_dataset_](https://drive.google.com/file/d/19jhYZQz1EIVsgeeu42KjaCKU4fOuVcEv/view?usp=sharing)
+[_mall_customers_dataset_](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python?select=Mall_Customers.csv)
 
 The dataset has the columns as follows:
 ['CustomerID', 'Gender', 'Age', 'Annual Income (k$)',
