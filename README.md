@@ -9,6 +9,7 @@ To understand the behaviour of the customers visiting a shoping mall, we impleme
         2. Exploratory Data Analysis
         3. Data Pre-Processing
         4. Model Building
+
 ## Understanding the Data:
 
 Made use of a dataset containing the details of customers visiting a shopping mall.
@@ -38,6 +39,7 @@ Summary of EDA:
         3. Median Annual Income for female customer's is near about  60k  and for male customer's is just above it.
         4. Spending Score for Female customers starting at around 35 ranging upto near 75, whereas for male customers it was around 25 and ranging just below 75.
         5. Median Spending Score for both male and female customers is same around 55.
+        
 ## Data Pre-Processing:
 
 Distribution of Age and Annual Income (k$) is positively or righly skewed.
@@ -51,15 +53,45 @@ Something similar can be observed with the 2 shoulders forming around the values
 And the ranges of all columns were not that of vast range, all the columns were in the range around 0-150 only. So no feature Scaling is required for this dataset.
 
 
-
 ## Model Building
 
 In the model building, we used K-Means Clustering model for segregating the customers.
 
-First I took Annual Income and Spending score as features and segregated the customers.
+Took three different pairs for segregating the customers based on them. The three different pair are :
+
+        1. Annual Income and Spending Score
+        2. Annual Income and Age
+        3. Spending Score and Age
 
 For determining the number of clusters, we used _Elbow plot_ which is the plot between _Within Clusters Sum of Squares (WCSS)_ and number of _clusters_. We can also find the number of clusters using _Silhouette  Score Method_.
 
-From both the methods, we found out number of clusters were 5.
+From both the methods, we found out number of clusters were 5 for (Annual Income, Spending Score) pair.
+
+        we can see the customers with average income and average score were more compared to others.
+
+<img src="images/income_score.png" height="200">
+
+From both the methods, we found out number of clusters were 4 for (Annual Income, Age) pair.
+
+        we can see the customers with average income were more compared to others in all the age groups .
+
+<img src="images/income_age.png" height="200">
+
+
+From both the methods, we found out number of clusters were 4 for (Spending Score Age) pair.
+
+        we can see the customers below age 40 are having maximum spending score and above 40 are having low or average spending score.
+
+<img src="images/score_age.png" height="200">
+
+Before PCA, done some feature scaling using Robust Scaler on the columns. 
+After done with those three pairs, did PCA on the three columns, and reduced the 3D data into 2D data. Then implemented same process as done to the above pairs.
+
+From both the methods, we found out number of clusters were 4 for Principal Components.
+
+<img src="images/pc1_pc2.png" height="200">
+
+
+
 
 
